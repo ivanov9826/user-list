@@ -4,7 +4,7 @@ export const UserEdit = (
     user,
     onClose
 ) => {
-    console.log(user);
+    
     return(
     <div className="overlay">
       <div className="backdrop" onClick={user.onCloseClick}></div>
