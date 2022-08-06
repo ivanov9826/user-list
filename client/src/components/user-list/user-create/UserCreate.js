@@ -48,7 +48,9 @@ export const UserCreate = (
             ...state,
             [e.target.name]: number < 0
         }))
-    }
+    };
+
+    const isFromValid = !Object.values(error).some(x => x)
 
     return (
         <div className="overlay">
@@ -173,7 +175,7 @@ export const UserCreate = (
                             </div>
                         </div>
                         <div id="form-actions">
-                            <button id="action-save" className="btn" type="submit">Save</button>
+                            <button id="action-save" className="btn" type="submit" disabled={!isFromValid}>Save</button>
                             <button id="action-cancel" className="btn" type="button" onClick={props.onCloseClick}>
                                 Cancel
                             </button>
